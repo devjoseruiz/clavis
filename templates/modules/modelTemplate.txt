@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * General model template
+ * Version 1.0.1
+ *
+ * Model of [[REPLACE]]
+ */
+class [[REPLACE]]Model extends Model {
+  public static $t1   = '[[REPLACE]]'; // Database table name;
+  
+  //public static $t2 = '__tabla 2___'; 
+  //public static $t3 = '__tabla 3___'; 
+
+  function __construct()
+  {
+    // General constructor
+  }
+  
+  static function all()
+  {
+    // All records
+    $sql = 'SELECT * FROM [[REPLACE]] ORDER BY id DESC';
+    return ($rows = parent::query($sql)) ? $rows : [];
+  }
+
+  static function by_id($id)
+  {
+    // Un registro con $id
+    $sql = 'SELECT * FROM [[REPLACE]] WHERE id = :id LIMIT 1';
+    return ($rows = parent::query($sql, ['id' => $id])) ? $rows[0] : [];
+  }
+}
+
