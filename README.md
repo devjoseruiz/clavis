@@ -25,7 +25,7 @@ Clavis is a web application that allow teachers to manage their classrooms.
 
 4. Install PHP dependencies:
    ```bash
-   composer install
+   docker-compose exec php composer install
    ```
 
 ## Configuration
